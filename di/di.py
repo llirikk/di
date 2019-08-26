@@ -21,7 +21,7 @@ class DI(object):
         in_deps = name in self._dependencies
 
         if not in_deps:
-            raise ModuleNotFoundError('Cannot find module: %s' % name)
+            raise ImportError('Cannot find module: %s' % name)
 
         return self._dependencies[name]
 
